@@ -1,0 +1,104 @@
+@use "../../scss/config" as c;
+
+.movieDetail {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	margin: 3rem auto;
+	min-height: 75vh;
+	
+	.movieImage {
+		img {
+			width: 100%;
+		}
+	}
+	
+	.movieDesc {
+		padding: 2rem;
+		
+		.movieTitle {
+		}
+		
+		.movieBrief {
+			display: flex;
+			gap: 0.75rem;
+			margin: 1rem auto;
+			
+			span {
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				
+				p {
+					color: c.$font-secondary;
+					font-weight: 400;
+				}
+			}
+		}
+		
+		.movieData {
+			.moviePlot {
+				margin: 1rem auto;
+				
+				p {
+					max-width: fit-content;
+					font-weight: 300;
+					line-height: 1.5;
+				}
+			}
+			
+			.movieCredits {
+				dl {
+					
+					div {
+						display: flex;
+						flex-direction: column;
+						gap: 0.5rem;
+						margin: 1rem auto;
+						
+						dt {
+							font-weight: 700;
+							opacity: 0.6;
+						}
+						
+						dd {
+							color: c.$font-secondary;
+							font-weight: 300;
+						}
+						
+					}
+					
+				}
+			}
+		}
+	}
+}
+
+
+@include c.tablets-and-up {
+	.movieDetail {
+		flex-direction: row-reverse;
+		justify-content: space-around;
+		
+		.movieBrief {
+			gap: 1.75rem;
+		}
+		
+		.movieImage {
+			height: 100%;
+		}
+		
+		.movieDesc {
+			.movieData {
+				.movieCredits {
+					dl {
+						div {
+							flex-direction: row;
+						}
+					}
+				}
+			}
+		}
+	}
+}

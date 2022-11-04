@@ -1,0 +1,17 @@
+.title {
+	text-align: center;
+	margin: 2rem auto 0.5rem;
+	
+	h2 {
+		font-size: clamp(2rem, 4vh, 3rem);
+		text-transform: uppercase;
+	}
+}
+
+.videoListing {
+	margin: 4rem auto 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem;
+}

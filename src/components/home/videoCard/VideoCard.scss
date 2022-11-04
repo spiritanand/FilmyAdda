@@ -1,0 +1,46 @@
+@use "../../../scss/config" as c;
+
+.videoCard {
+	background-color: c.$secondary-color;
+	width: min-content;
+	border-radius: 1rem;
+	overflow: hidden;
+	border-bottom: c.$font-primary 1px solid;
+	transition: transform 300ms ease-in-out,
+	opacity 300ms ease-in-out;
+	cursor: pointer;
+	position: relative;
+	
+	.videoInfo {
+		background-color: c.$secondary-color;
+		position: absolute;
+		opacity: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		transition: opacity 300ms ease-in-out;
+		
+		h2 {
+			text-align: center;
+			margin: 0.5rem auto;
+			padding: 0.5rem;
+		}
+		
+		p {
+			text-align: right;
+			padding-right: 1rem;
+			padding-bottom: 1rem;
+		}
+	}
+	
+	&:hover {
+		transform: scale(1.1);
+		border: c.$font-primary 2px solid;
+		opacity: 0.9;
+		
+		.videoInfo {
+			opacity: 1;
+		}
+	}
+}

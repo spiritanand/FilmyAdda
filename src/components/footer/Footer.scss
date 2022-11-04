@@ -1,0 +1,21 @@
+@use "../../scss/config" as c;
+
+.footer {
+	background-color: c.$secondary-color;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 1rem;
+	height: 15vh;
+	
+	a {
+		display: flex;
+		justify-content: center;
+	}
+	
+	img{
+		width: 50%;
+	}
+}

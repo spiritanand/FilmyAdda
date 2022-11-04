@@ -1,0 +1,34 @@
+@use "config" as c;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: c.$primary-color;
+	color: c.$font-primary;
+	font-family: 'Ubuntu', 'sans-serif';
+}
+
+a {
+	text-decoration: none;
+	color: c.$font-primary;
+}
+
+a:hover {
+	color: c.$font-secondary;
+}
+
+.container {
+	padding: 0 1rem;
+}
+
+.notFound {
+	display: flex;
+	height: 75vh;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
